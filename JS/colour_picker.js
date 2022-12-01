@@ -137,6 +137,6 @@ sliderCanvas.addEventListener('click',function(event){
    simple 2d graphics and drawing an elipse on a canvas
 
    https://stackoverflow.com/questions/21594756/drawing-circle-ellipse-on-html5-canvas-using-mouse-events
-   //
+   
    
 */
