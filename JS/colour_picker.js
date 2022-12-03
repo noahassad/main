@@ -1,3 +1,7 @@
+// Author: Austin Cooper
+// Version: 1.2
+// Date: November 27 2022
+
 var colorCanvas = document.getElementById('colour_canvas');
 var ColorCtx = colorCanvas.getContext('2d');  // This create a 2D context for the canvas
 
@@ -10,6 +14,8 @@ var previewCtx = previewCanvas.getContext('2d');  // This create a 2D context fo
 var redBox = document.getElementById('rgbr');
 var greenBox = document.getElementById('rgbg');
 var blueBox = document.getElementById('rgbb');
+
+var cartButton = document.getElementById('cartbutton');
 
 // Create a horizontal gradient
 function drawColorCanvas(colour) {
@@ -86,10 +92,28 @@ function drawEllipse(x1, y1, x2, y2) {
     ColorCtx.stroke();
 }
 
-canvasBackground = "#0000ff"
-drawColorCanvas(canvasBackground)
-drawSliderCanvas()
-diameter=10
+function drawLineSlider(x) {
+    
+    /// start a new path
+    sliderCtx.beginPath();
+
+    /// set start point at angle 0
+    sliderCtx.moveTo(x, 0);
+
+    /// create the ellipse    
+        sliderCtx.lineTo(x, 40);
+    
+    /// close it and stroke it for demo
+    sliderCtx.closePath();
+    sliderCtx.strokeStyle = '#000';
+    sliderCtx.stroke();
+}
+
+canvasBackground = "#0000ff" // colour of the horizontal gradient
+drawColorCanvas(canvasBackground) // initial draw of the canvas on page load
+drawSliderCanvas() // initial draw of the slider canvas on page load
+diameter=10 // set the diameter of the ellipse in pixels
+drawEllipse(0-(diameter/2),0-(diameter/2),0+(diameter/2),0+(diameter/2)) // default ellipse in top left corner
 
 colorCanvas.addEventListener('click',function(event){
     drawColorCanvas(canvasBackground)
@@ -105,7 +129,7 @@ colorCanvas.addEventListener('click',function(event){
     redBox.setAttribute('value', pixel[0])
     greenBox.setAttribute('value', pixel[1])
     blueBox.setAttribute('value', pixel[2])
-    //console.log(x + " " + y)
+    console.log("uwu")
     //console.log(window.scrollX + " " + window.scrollY);
 });
 
@@ -116,10 +140,17 @@ sliderCanvas.addEventListener('click',function(event){
     let xOffsetSlider = getOffset(sliderCanvas).left
     let yOffsetSlider = getOffset(sliderCanvas).top
     pixel = sliderCtx.getImageData(xSlider-xOffsetSlider,ySlider-yOffsetSlider,1,1)['data'];   // Read pixel Color
+    drawLineSlider(xSlider-xOffsetSlider)
     rgb = `rgb(${pixel[0]},${pixel[1]},${pixel[2]})`;
     drawColorCanvas(rgb)
     canvasBackground = rgb
 });
+
+cartButton.onclick = function(){
+    if (confirm("Confirm add to cart?")) {
+        //sessionStorage.setItem("colour", "#ffffff")
+    } 
+}
 
 /* I based my work off of a tutorial and snippets of code regarding how to get the canvas working
    They will be cited below
