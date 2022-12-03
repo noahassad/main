@@ -1,0 +1,23 @@
+Products:
+  Colors:
+    Peach: "\$25.99"
+    Perwinkle: "\$25.99"
+    Pink: "\$25.99"
+    Sand: "\$25.99"
+    Chartreuse: "\$25.99"
+    SteelGray: "\$25.99"
+    Custom: "\$29.99"
+  BrushesAndRollers:
+    Flatheaded: "\$15.99"
+    Pointed: "\$25.99"
+    Edged: "\$10.99"
+    Roller: "\$11.99"
+    RollerReplace: "\$25.99"
+    FullKit: "\$250.99"
+  Miscellaneous:
+    LadderTray: "\$59.99"
+    LadderNoTray: "\$34.99"
+    ExtendLadder: "\$49.99"
+    PaintMask: "\$34.99"
+    RagPack: "\$10.99"
+    PaintTape: "\$4.99"
