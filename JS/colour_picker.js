@@ -1,6 +1,6 @@
 // Author: Austin Cooper
-// Version: 1.2
-// Date: November 27 2022
+// Version: 1.3
+// Date: December 3 2022
 
 var colorCanvas = document.getElementById('colour_canvas');
 var ColorCtx = colorCanvas.getContext('2d');  // This create a 2D context for the canvas
@@ -109,11 +109,16 @@ function drawLineSlider(x) {
     sliderCtx.stroke();
 }
 
+function getNumCartItems() {
+    return String(sessionStorage.length);
+}
+
 canvasBackground = "#0000ff" // colour of the horizontal gradient
 drawColorCanvas(canvasBackground) // initial draw of the canvas on page load
 drawSliderCanvas() // initial draw of the slider canvas on page load
 diameter=10 // set the diameter of the ellipse in pixels
 drawEllipse(0-(diameter/2),0-(diameter/2),0+(diameter/2),0+(diameter/2)) // default ellipse in top left corner
+customColour = "0,0,0"
 
 colorCanvas.addEventListener('click',function(event){
     drawColorCanvas(canvasBackground)
@@ -129,7 +134,7 @@ colorCanvas.addEventListener('click',function(event){
     redBox.setAttribute('value', pixel[0])
     greenBox.setAttribute('value', pixel[1])
     blueBox.setAttribute('value', pixel[2])
-    console.log("uwu")
+    customColour = String(pixel[0]) + String(pixel[1]) + String(pixel[2])
     //console.log(window.scrollX + " " + window.scrollY);
 });
 
@@ -148,7 +153,7 @@ sliderCanvas.addEventListener('click',function(event){
 
 cartButton.onclick = function(){
     if (confirm("Confirm add to cart?")) {
-        //sessionStorage.setItem("colour", "#ffffff")
+        sessionStorage.setItem("Item:"+getNumCartItems+":custom_colour:" + customColour, "29.99")
     } 
 }
 
