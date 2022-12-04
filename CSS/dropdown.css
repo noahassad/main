@@ -11,7 +11,7 @@ li {
 }
 
 h3 {
-    background: #659DBD;
+    background: black;
     color: white;
     font-size: 30px;
     padding-left: 3%;
@@ -25,12 +25,11 @@ font-family: Verdana, sans-serif;
 
 .nav-bar {
   text-align: left;
-  color: #659DBD;
+
 }
 
 
 .drButton {
-  background-color: #659DBD;
   color: white;
   padding: 16px;
   font-size: 25px;
@@ -76,11 +75,10 @@ html{
 footer {
 text-align: center;
 padding: 8px;
-background-color:#659DBD;
+background-color:black;
 }
 
 a {
-  background-color: #659DBD;
   color: white;
   padding: 16px;
   font-size: 25px;
@@ -99,6 +97,15 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
+h3 {
+    background: black;
+    color: white;
+    font-size: 25px;
+    padding-left: 3%;
+    padding-bottom: 1%; 
+    padding-top: 1%;
+    font-family: poppins;
+}
 
 
   
