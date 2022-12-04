@@ -86,19 +86,19 @@ function getProductImagePath(name) {
             return "../images/perwinkle.jpg";
             break;
         case ":itemtype:steelgrey":
-            return "../images/steel gray.jpg";
+            return "../images/Steel Gray.jpg";
             break;
         case ":itemtype:chartreuse":
-            return "../images/chartreuse.jpg";
+            return "../images/Chartreuse.jpg";
             break;
         case ":itemtype:sand":
-            return "../images/sand.jpg";
+            return "../images/Sand.jpg";
             break;
         case ":itemtype:peach":
-            return "../images/peach.jpg";
+            return "../images/Peach.jpg";
             break;
         case ":itemtype:pink":
-            return "../images/pink.jpg";
+            return "../images/Pink.jpg";
             break;
         //Brushes
         case ":itemtype:roller":
