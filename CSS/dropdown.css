@@ -5,10 +5,6 @@ li {
 	
 }
 
-#myList {
-	color: yellow;
-	list-style-type: disc;
-}
 
 h3 {
     background: black;
@@ -21,7 +17,9 @@ h3 {
 
 body {
 font-family: Verdana, sans-serif;
+background-color: #7798BC;
 }
+
 
 .nav-bar {
   text-align: left;
@@ -35,7 +33,6 @@ font-family: Verdana, sans-serif;
   font-size: 25px;
   border: 5px;
 }
-
 
 
 .dropdown {
@@ -84,9 +81,7 @@ a {
   font-size: 25px;
   border: 5px;
 }
-#Main a  {
-background-color: white;
-}
+
 
 
 
@@ -107,5 +102,20 @@ h3 {
     font-family: poppins;
 }
 
+@media(max-width:790px){
+  .dropdown {
+    position: relative;
+    display: block;
+    padding: 0.5%;
+  }
+  .dropdown:hover .dropdown-content {display: inline-block;}
+}
 
+img{
+ max-width: 100%;
+ max-height: 100%;
+ display: block; 
+ margin-left: auto;
+ margin-right: auto;
+    }
   
