@@ -114,7 +114,7 @@ h3 {
     display: block;
     padding: 0.5%;
   }
-  .dropdown:hover .dropdown-content {display: inline-block;}
+  .dropdown:hover .dropdown-content {display: inline-block; transition-delay: 3s;}
 }
 
 img{
