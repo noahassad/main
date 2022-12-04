@@ -113,6 +113,15 @@ function getNumCartItems() {
     return String(sessionStorage.length);
 }
 
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
 canvasBackground = "#0000ff" // colour of the horizontal gradient
 drawColorCanvas(canvasBackground) // initial draw of the canvas on page load
 drawSliderCanvas() // initial draw of the slider canvas on page load
@@ -134,7 +143,7 @@ colorCanvas.addEventListener('click',function(event){
     redBox.setAttribute('value', pixel[0])
     greenBox.setAttribute('value', pixel[1])
     blueBox.setAttribute('value', pixel[2])
-    customColour = String(pixel[0]) + String(pixel[1]) + String(pixel[2])
+    customColour = rgbToHex(pixel[0], pixel[1], pixel[2])
     //console.log(window.scrollX + " " + window.scrollY);
 });
 
@@ -153,7 +162,7 @@ sliderCanvas.addEventListener('click',function(event){
 
 cartButton.onclick = function(){
     if (confirm("Confirm add to cart?")) {
-        sessionStorage.setItem("Item:"+getNumCartItems+":custom_colour:" + customColour, "29.99")
+        sessionStorage.setItem("Item:"+getNumCartItems()+":itemtype:custom_colour-" + customColour, "29.99")
     } 
 }
 

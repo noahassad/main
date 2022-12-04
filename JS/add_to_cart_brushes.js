@@ -1,3 +1,6 @@
+// Author: Austin Cooper
+// Version: 1.3
+// Date: December 3 2022
 var flatheadbrushButton = document.getElementById('flatheadbrush');
 var pointedbrushButton = document.getElementById('pointedbrush');
 var edgedbrushButton = document.getElementById('edgedbrush');
@@ -14,48 +17,48 @@ item = "default"
 
 flatheadbrushButton.onclick = function(){
     price = "15.99"
-    item = "flathead"
+    item = "flathead-"
     if (confirm("Confirm add to cart?")) {
-        sessionStorage.setItem("Item:"+getNumCartItems+":itemtype:" + item, price)
+        sessionStorage.setItem("Item:"+getNumCartItems()+":itemtype:" + item, price)
     } 
 }
 
 pointedbrushButton.onclick = function(){
     price = "25.99"
-    item = "pointed"
+    item = "pointed-"
     if (confirm("Confirm add to cart?")) {
-        sessionStorage.setItem("Item:"+getNumCartItems+":itemtype:" + item, price)
+        sessionStorage.setItem("Item:"+getNumCartItems()+":itemtype:" + item, price)
     } 
 }
 
 edgedbrushButton.onclick = function(){
     price = "10.99"
-    item = "edged"
+    item = "edged-"
     if (confirm("Confirm add to cart?")) {
-        sessionStorage.setItem("Item:"+getNumCartItems+":itemtype:" + item, price)
+        sessionStorage.setItem("Item:"+getNumCartItems()+":itemtype:" + item, price)
     } 
 }
 
 rollerbrushButton.onclick = function(){
     price = "11.99"
-    item = "roller"
+    item = "roller-"
     if (confirm("Confirm add to cart?")) {
-        sessionStorage.setItem("Item:"+getNumCartItems+":itemtype:" + item, price)
+        sessionStorage.setItem("Item:"+getNumCartItems()+":itemtype:" + item, price)
     } 
 }
 
 rollerreplaceButton.onclick = function(){
     price = "25.99"
-    item = "rollereplace"
+    item = "rollereplace-"
     if (confirm("Confirm add to cart?")) {
-        sessionStorage.setItem("Item:"+getNumCartItems+":itemtype:" + item, price)
+        sessionStorage.setItem("Item:"+getNumCartItems()+":itemtype:" + item, price)
     } 
 }
 
 fullkitButtonButton.onclick = function(){
     price = "250.99"
-    item = "fullkit"
+    item = "fullkit-"
     if (confirm("Confirm add to cart?")) {
-        sessionStorage.setItem("Item:"+getNumCartItems+":itemtype:" + item, price)
+        sessionStorage.setItem("Item:"+getNumCartItems()+":itemtype:" + item, price)
     } 
 }
