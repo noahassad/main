@@ -23,44 +23,40 @@
 
 
 <link rel="stylesheet" href="../CSS/dropdown.css">
-<link rel="stylesheet" href="../CSS/body.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 
 <body>
 	<div id="Main" >
-
-		<h1><a href="../index.html" ><img src="../images/logo.png" ></a></h1>
-
+		<h1><a href="index.html" ><img src="../images/logo.png" ></a></h1>
 	</div>
 
 
 	<h3>
 
 		<div class="nav-bar">
-      
 				<div class="dropdown">
 					<a href="../index.html" button class="drButton">Home</button></a>
 				</div>
 
 				<div class="dropdown">
-					<a href="../HTML/products.html" button class="drButton">Products</button>
+					<a href="products.html" button class="drButton">Products</button>
 					<div class="dropdown-content">
-						<a href="../HTML/color_products.html">Colors</a>
-						<a href="../HTML/brushes_rollers.html">Brushes and Rollers</a>
-						<a href="../HTML/miscellaneous.html">Miscellaneous</a>
+						<a href="color_products.html">Colors</a>
+						<a href="brushes_rollers.html">Brushes and Rollers</a>
+						<a href="miscellaneous.html">Miscellaneous</a>
 					</div>
 				</div>
 
 
-        <div class="dropdown">
-					<a href="../HTML/color.html" button class="drButton">Color</button></a>
-				</div>
-   
 
 				<div class="dropdown">
-					<a href ="../HTML/reviews.html" button class="drButton">Reviews</button>
+					<a href="color.html" button class="drButton">Color</button></a>
+				</div>
+
+
+				<div class="dropdown">
+					<a href ="reviews.html" button class="drButton">Reviews</button>
 					<div class="dropdown-content">
 						<a href="#">Post your Reviews</a>
 						<a href="#">Product Reviews</a>
@@ -69,32 +65,130 @@
 
 
 				<div class="dropdown">
-					<a href="../HTML/company.html" button class="drButton">Our Company</button>
+					<a href="company.html" button class="drButton">Our Company</button>
 					<div class="dropdown-content">
 							<a href="#">Info</a>
 							<a href="#">About Us</a>
 					</div>
-				</div> 
-        
-
+				</div>  
+                
+                <div class="dropdown">
+					<a href="../HTML/cart.html" button class="drButton">Cart</button></a>
+				</div>
 				
-		</div> 
-	</h3>
-	  <br>
+			</div> 
+		</h3>
+	<br>
 
 
 
 
 
     
-
+<!doctype html>
                         <html>
                             <head>
                                 <meta charset='utf-8'>
                                 <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
                                 <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
                                 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <style>::-webkit-scrollbar {
+                                  width: 8px;
+                                }
+                                /* Track */
+                                ::-webkit-scrollbar-track {
+                                  background: #f1f1f1; 
+                                }
+                                 
+                                /* Handle */
+                                ::-webkit-scrollbar-thumb {
+                                  background: #888; 
+                                }
                                 
+                                /* Handle on hover */
+                                ::-webkit-scrollbar-thumb:hover {
+                                  background: #555; 
+                                } body {
+    margin: 0;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.5385;
+    color: #333;
+    text-align: left;
+    /* background-color: #9ea4f1; */
+}
+
+.mt-50{
+
+    margin-top: 50px;
+}
+
+.mb-50{
+
+    margin-bottom: 50px;
+}
+
+
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .1875rem;
+}
+
+.card-img-actions {
+    position: relative;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.card-img{
+
+    width: 350px;
+}
+
+.star{
+        color: red;
+}
+
+.bg-cart {
+    background-color:orange;
+    color:#fff;
+}
+
+.bg-cart:hover {
+    
+    color:#fff;
+}
+
+.bg-buy {
+    background-color:green;
+    color:#fff;
+    padding-right: 29px;
+}
+.bg-buy:hover {
+    
+    color:#fff;
+}
+
+a{
+
+    text-decoration: none !important;
+}</style>
                                 </head>
                                 <body className='snippet-body'>
                                 <div class="container d-flex justify-content-center mt-50 mb-50">
@@ -151,7 +245,7 @@
                                     <div class="card-body bg-light text-center">
                                         <div class="mb-2">
                                             <h6 class="font-weight-semibold mb-2">
-                                                <a href="#" class="text-default mb-2" data-abc="true">Perwinkle Paint</a>
+                                                <a href="#" class="text-default mb-2" data-abc="true">perwinkle Paint</a>
                                             </h6>
 
                                             <a href="#" class="text-muted" data-abc="true">Colors</a>
@@ -290,7 +384,7 @@
                                     <div class="card-body bg-light text-center">
                                         <div class="mb-2">
                                             <h6 class="font-weight-semibold mb-2">
-                                                <a href="#" class="text-default mb-2" data-abc="true">Steel-gray Paint</a>
+                                                <a href="#" class="text-default mb-2" data-abc="true">steel-gray Paint</a>
                                             </h6>
 
                                             <a href="#" class="text-muted" data-abc="true">Colors</a>
