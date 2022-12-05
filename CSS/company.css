@@ -1,5 +1,5 @@
 h1 {
-	color:rgb(134, 151, 221);
+	color:black;
   font-size: 500%;
 }
 
@@ -8,9 +8,12 @@ li {
 	
 }
 
-#myList {
-	color: yellow;
-	list-style-type: disc;
+@media (min-width: 576px)
+.col-sm-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    color: black;
 }
 
 h3 {
