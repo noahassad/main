@@ -121,9 +121,14 @@ img{
  margin-right: auto;
     }
 
-#homepage{
-max-width: 100%;
+.video {
+  width:100%;
+  max-width:100%;
+  height:auto;
 }
 
+.container-fluid{
+   padding: 0;
+}
 
   
